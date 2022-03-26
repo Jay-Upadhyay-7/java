@@ -1,13 +1,12 @@
-package basic;
 import java.util.Scanner;
-class bank{
+class Account{
   int accountno;
   String name;
   int amount;
-  bank(int a,int b,String n){
-    accountno=a;
-    name=n;
-    amount=b;
+  Account(int accountno,int amount,String name){
+    this.accountno=accountno;
+    this.name=name;
+    this.amount=amount;
   }
   void deposit(int d){
      amount=amount+d;
@@ -27,7 +26,7 @@ class bank{
     System.out.println("Balance amount: "+amount);
   }
   public static void main(String args[]){
-    bank obj=new bank(1234,2400,"jay");
+    Account obj=new Account(1234,2400,"jay");
     int choice=1,x,y;
     System.out.println("bank details: --------");
     obj.display();
